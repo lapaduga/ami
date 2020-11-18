@@ -8,6 +8,14 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+body{
+	@media (max-width:992px) {
+		&.lock{
+			overflow: hidden;
+		}
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -63,16 +71,27 @@ body {
 			flex: 0 0 100px;
 			margin: 0 20px 0 0;
 		}
+		@media (max-width:460px) {
+			flex: 0 0 80px;
+			margin: 0 10px 0 0;
+		}
 	}
 
 	&__menu {
 		@media (max-width: 992px) {
+			overflow: auto;
+			transition: all 0.3s ease 0s;
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			background-color: #ffc76d;
+			padding: 100px 15px 20px 15px;
+			transform: translate(-100%, 0);
+			&.active{
+				transform: translate(0, 0);
+			}
 		}
 	}
 
@@ -84,6 +103,12 @@ body {
 			margin: 0 0 0 42px;
 			@media (max-width: 1200px) {
 				margin: 0 0 0 15px;
+			}
+		}
+		@media (max-width:992px) {
+			display: block;
+			li{
+				margin: 0 0 10px 0;
 			}
 		}
 	}
@@ -112,6 +137,9 @@ body {
 				}
 			}
 		}
+		@media (max-width:992px) {
+			font-size: 20px;
+		}
 	}
 
 	&__contact {
@@ -122,7 +150,7 @@ body {
 			margin: 0 30px 0 auto;
 		}
 		@media (max-width:460px) {
-			margin: 0 20px 0 auto;
+			margin: 0 10px 0 auto;
 		}
 	}
 
@@ -139,6 +167,15 @@ body {
 			&:hover {
 				background: url("../img/header/phone-hover.svg") center no-repeat;
 			}
+		}
+		@media (max-width:460px) {
+			width: 26px;
+			height: 26px;
+			background: url("../img/header/phone.svg") center/contain no-repeat;
+			position: absolute;
+			top: 50%;
+			left: -36px;
+			transform: translate(0, -50%);
 		}
 	}
 
@@ -198,8 +235,9 @@ body {
 		}
 		@media (max-width:460px) {
 			width: 100%;
-			height: 10px;
-			background: url("../img/header/arrow.svg") right no-repeat;
+			height: 14px;
+			background: url("../img/header/arrow.svg") 100% 40% no-repeat;
+			margin: 0;
 			span{
 				display: block;
 				font-family: "Montserrat", sans-serif;
@@ -232,7 +270,7 @@ body {
 			}
 		}
 		@media (max-width:460px){
-			padding: 0;
+			padding: 3px 0 0 0;
 		}
 	}
 
@@ -252,6 +290,7 @@ body {
 				width: 100%;
 				height: 2px;
 				top: 9px;
+				transition: all 0.3s ease 0s;
 			}
 			&:before,
 			&:after {
@@ -261,12 +300,26 @@ body {
 				width: 100%;
 				height: 2px;
 				left: 0;
+				transition: all 0.3s ease 0s;
 			}
 			&:before {
 				top: 0;
 			}
 			&:after {
 				bottom: 0;
+			}
+			&.active{
+				span{
+					transform: scale(0);
+				}
+				&:before{
+					transform: rotate(45deg);
+					top: 9px;
+				}
+				&:after{
+					transform: rotate(-45deg);
+					bottom: 9px;
+				}
 			}
 		}
 	}
