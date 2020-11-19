@@ -80,6 +80,32 @@
 		</footer>
 	</div>
 
+	<!-- Callback form -->
+
+	<div id="callback" class="popup">
+		<div class="popup__area"></div>
+		<div class="popup__body">
+			<div class="popup__content">
+				<div class="popup__close"></div>
+				<form action="#" id="form" class="popup__form">
+					<h1 class="popup__title title">
+						Закажите обратный звонок
+					</h1>
+					<div class="popup__subtitle">
+						И мы перезвоним в указанное Вами время
+					</div>
+					<input placeholder="Как к вам обращаться?" type="text"
+						class="popup__person-name popup__input-item _req" name="name" value="">
+					<input placeholder="Ваш номер телефона" type="tel" class="popup__phone popup__input-item _req"
+						name="phone" value="">
+					<textarea placeholder="Укажите удобные для Вас день и время разговора" id="time" name="time"
+						class="popup__time popup__input-item _req"></textarea>
+					<div class="popup__alert">Заполните, пожалуйста, все поля!</div>
+					<button type="submit" class="popup__button">Заказать звонок</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
