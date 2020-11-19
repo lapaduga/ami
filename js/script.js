@@ -96,8 +96,12 @@ $(document).ready(function () {
 		if (document.documentElement.clientWidth > 992) {
 			if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 				document.getElementById("header").style.backgroundColor = "#fff";
+				document.getElementById("header__body").style.height = "70px";
+				document.getElementById("header__logo").style.flex = "0 0 100px";
 			} else {
 				document.getElementById("header").style.backgroundColor = "transparent";
+				document.getElementById("header__body").style.height = "110px";
+				document.getElementById("header__logo").style.flex = "0 0 192px";
 			}
 		}
 	}
