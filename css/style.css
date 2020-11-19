@@ -394,13 +394,13 @@ body {
   .header__arrow {
     width: 100%;
     height: 14px;
-    background: url("../img/header/arrow.svg") 100% 40% no-repeat;
+    background: url("../img/header/arrow.svg") 100% 60% no-repeat;
     margin: 0;
   }
   .header__arrow span {
     display: block;
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     padding: 0 15px 0 0;
     font-weight: 500;
   }
@@ -439,6 +439,7 @@ body {
 @media (max-width: 460px) {
   .header__order-call {
     padding: 3px 0 0 0;
+    font-size: 14px;
   }
 }
 
