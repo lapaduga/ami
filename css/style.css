@@ -113,7 +113,6 @@ body {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
-  position: relative;
 }
 
 .header {
@@ -385,13 +384,6 @@ body {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .header__arrow:hover {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 460px) {
   .header__arrow {
     width: 100%;
@@ -412,12 +404,18 @@ body {
   display: none;
   position: absolute;
   top: 20px;
-  left: 0;
+  left: -112px;
   width: 126px;
   border: 1px solid #9b9b9b;
   background-color: #fff;
   padding: 10px 5px;
   border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+  .header__city {
+    left: 0;
+  }
 }
 
 .header__city-group {
@@ -450,6 +448,10 @@ body {
 
 .header__city-link {
   color: #000000;
+}
+
+.header__city-link:hover {
+  text-decoration: underline;
 }
 
 .header__order-call {
