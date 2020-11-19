@@ -7,16 +7,16 @@ $(document).ready(function () {
 	const form = document.getElementById('form');
 	const alert = document.querySelector('.popup__alert');
 
-	//burger
 
+	//burger
 	$('.header__burger').click(function () {
 		$('.header__burger, .header__menu').toggleClass('active');
+		$('.header__city').fadeOut(300);
 		body.classList.toggle('lock');
 	});
 
 
 	//callback popup
-
 	orderCall.onclick = function () {
 		callback.classList.add('active');
 		body.classList.add('lock');
@@ -82,4 +82,10 @@ $(document).ready(function () {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
 	}
+
+
+	//choosing city function
+	$('.header__arrow').on('click', function () {
+		$('.header__city').fadeToggle(300);
+	});
 });

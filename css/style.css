@@ -196,7 +196,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #DC911B;
+    background-color: #dc911b;
     padding: 100px 15px 20px 15px;
     -webkit-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
@@ -378,6 +378,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  position: relative;
 }
 
 .header__arrow span {
@@ -405,6 +406,50 @@ body {
     padding: 0 15px 0 0;
     font-weight: 500;
   }
+}
+
+.header__city {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 126px;
+  border: 1px solid #9b9b9b;
+  background-color: #fff;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.header__city-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header__city-group:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #9b9b9b;
+}
+
+.header__city-group:last-child {
+  margin-bottom: 0;
+}
+
+.header__city-group:last-child:after {
+  display: none;
+}
+
+.header__city-name {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 6px;
+}
+
+.header__city-link {
+  color: #000000;
 }
 
 .header__order-call {
@@ -566,7 +611,7 @@ body {
   right: 0;
   height: 40px;
   width: 40px;
-  background-color: #DC911B;
+  background-color: #dc911b;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -710,7 +755,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.02em;
   color: #ffffff;
-  background: #DC911B;
+  background: #dc911b;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -727,7 +772,7 @@ body {
   margin: 0 auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  border: 1px solid #DC911B;
+  border: 1px solid #dc911b;
 }
 
 .popup__button:hover {
