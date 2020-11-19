@@ -36,7 +36,7 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 10;
-
+	transition: all 0.3s ease 0s;
 	&:before {
 		content: "";
 		position: absolute;
@@ -44,8 +44,10 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #fff;
 		z-index: 2;
+		@media (max-width:992px) {
+			background-color: #fff;
+		}
 	}
 	&__body {
 		position: relative;
@@ -85,7 +87,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #dc911b;
+			background-color: #ffdda7;
 			padding: 100px 15px 20px 15px;
 			transform: translate(-100%, 0);
 			&.active {
@@ -138,7 +140,6 @@ body {
 		}
 		@media (max-width: 992px) {
 			font-size: 20px;
-			color: #fff;
 		}
 	}
 
@@ -254,7 +255,7 @@ body {
 		background-color: #fff;
 		padding: 10px 5px;
 		border-radius: 5px;
-		@media (max-width:460px) {
+		@media (max-width: 460px) {
 			left: 0;
 		}
 	}
@@ -262,7 +263,7 @@ body {
 	&__city-group {
 		margin-bottom: 20px;
 		position: relative;
-		&:after{
+		&:after {
 			content: "";
 			position: absolute;
 			bottom: -10px;
@@ -271,9 +272,9 @@ body {
 			width: 100%;
 			background-color: #9b9b9b;
 		}
-		&:last-child{
+		&:last-child {
 			margin-bottom: 0;
-			&:after{
+			&:after {
 				display: none;
 			}
 		}
@@ -286,7 +287,7 @@ body {
 
 	&__city-link {
 		color: #000000;
-		&:hover{
+		&:hover {
 			text-decoration: underline;
 		}
 	}
@@ -373,6 +374,38 @@ body {
 
 .main {
 	flex: 1 1 auto;
+}
+
+//mainscreen
+
+.mainscreen {
+	background: url("../img/mainscreen/bg1.jpg") 90% 100% no-repeat, #ffdda7;
+	@media (max-width: 1365px) {
+		background: url("../img/mainscreen/bg1.jpg") 300px 100% no-repeat, #ffdda7;
+	}
+	@media (max-width:767px){
+		background: url("../img/mainscreen/bg1.jpg") center bottom/600px no-repeat, #ffdda7;
+	}
+	&__body {
+		min-height: 690px;
+		display: flex;
+		align-items: center;
+		@media (max-width:767px) {
+			align-items: flex-start;
+			padding: 130px 0 0 0;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 32px;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: #3e3e3d;
+		@media (max-width:460px) {
+			font-size: 24px;
+		}
+	}
 }
 
 //callback popup

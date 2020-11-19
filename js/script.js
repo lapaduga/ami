@@ -88,4 +88,17 @@ $(document).ready(function () {
 	$('.header__arrow').on('click', function () {
 		$('.header__city').fadeToggle(300);
 	});
+
+
+	//header height on scroll behaviour
+	window.onscroll = function () { scrollFunction() };
+	function scrollFunction() {
+		if (document.documentElement.clientWidth > 992) {
+			if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+				document.getElementById("header").style.backgroundColor = "#fff";
+			} else {
+				document.getElementById("header").style.backgroundColor = "transparent";
+			}
+		}
+	}
 });
