@@ -1132,6 +1132,7 @@ body {
 .projects__all {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  padding: 0 20px 0 0;
 }
 
 .projects__all a {
