@@ -805,7 +805,7 @@ body {
   background-color: #dc911b;
 }
 
-.slider-block {
+.testimonials {
   background: url("../img/slider/testimonialsbg.svg") center right no-repeat, #3e3e3d;
 }
 
@@ -1719,6 +1719,10 @@ body {
   .articles__text {
     font-size: 16px;
   }
+}
+
+.certificates {
+  background: url("../img/slider/certificatesbg.svg") center right no-repeat, #3e3e3d;
 }
 
 .popup {

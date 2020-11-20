@@ -546,10 +546,13 @@ body {
 	}
 }
 
-//slider
+//testimonials
+
+.testimonials{
+	background: url("../img/slider/testimonialsbg.svg") center right no-repeat, #3e3e3d;
+}
 
 .slider-block {
-	background: url("../img/slider/testimonialsbg.svg") center right no-repeat, #3e3e3d;
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -1174,6 +1177,12 @@ body {
 			font-size: 16px;
 		}
 	}
+}
+
+//certificates
+
+.certificates{
+	background: url("../img/slider/certificatesbg.svg") center right no-repeat, #3e3e3d;
 }
 
 //callback popup
