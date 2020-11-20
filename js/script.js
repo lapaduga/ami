@@ -105,4 +105,33 @@ $(document).ready(function () {
 			}
 		}
 	}
+
+
+	//slider
+	$('.slider').slick({
+		slidesToShow: 3,
+		infinite: false,
+		adaptiveHeight: true,
+		responsive:[
+			{
+				breakpoint: 1024,
+				settings: {
+					centerMode: true,
+					initialSlide: 2
+				}
+			},
+			{
+				breakpoint: 993,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 601,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 });

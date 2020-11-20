@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -769,6 +770,12 @@ body {
   color: #000000;
 }
 
+@media (max-width: 767px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
 .text {
   font-size: 16px;
   line-height: 150%;
@@ -797,6 +804,178 @@ body {
 .button:hover {
   color: #ffffff;
   background-color: #dc911b;
+}
+
+.testimonials {
+  background: url("../img/slider/testimonialsbg.svg") center right no-repeat, #3e3e3d;
+}
+
+.testimonials__title {
+  color: #fff;
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
+@media (max-width: 992px) {
+  .testimonials__title {
+    margin: 0 0 30px 0;
+  }
+}
+
+.testimonials__show {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0 50px 0 0;
+}
+
+.testimonials__show:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+  .testimonials__show {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials__show {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.slider-block-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 760px;
+  max-width: 820px;
+}
+
+@media (max-width: 1023px) {
+  .slider-block-body {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-block-body {
+    min-height: 630px;
+  }
+}
+
+.slider {
+  min-width: 0;
+  margin: 0 0 55px 0;
+  position: relative;
+  /* Слайдер */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Слайд */
+  /* Слайд активный (показывается) */
+  /* Слайд основной */
+  /* Слайд по центру */
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+  /* Стрелка не активная */
+}
+
+@media (max-width: 767px) {
+  .slider {
+    margin: 0 0 80px 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .slider__item {
+    text-align: center;
+  }
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  z-index: 2;
+  font-size: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 34px;
+  width: 34px;
+}
+
+.slider .slick-arrow.slick-prev {
+  -webkit-transform: translate(-150%);
+          transform: translate(-150%);
+  border: 1px solid #dc911b;
+  background: url("../img/slider/arrow-black-left.svg") center no-repeat, #dc911b;
+}
+
+.slider .slick-arrow.slick-prev:hover {
+  background: url("../img/slider/arrow-gold-left.svg") center no-repeat, #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .slider .slick-arrow.slick-prev {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+.slider .slick-arrow.slick-next {
+  border: 1px solid #dc911b;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: url("../img/slider/arrow-black-right.svg") center no-repeat, #dc911b;
+}
+
+.slider .slick-arrow.slick-next:hover {
+  background: url("../img/slider/arrow-gold-right.svg") center no-repeat, #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .slider .slick-arrow.slick-next {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+}
+
+.slider .slick-arrow.slick-prev.slick-disabled {
+  background: url("../img/slider/arrow-black-left.svg") center no-repeat, #c4c4c4;
+  border: 1px solid #c4c4c4;
+}
+
+.slider .slick-arrow.slick-next.slick-disabled {
+  background: url("../img/slider/arrow-black-right.svg") center no-repeat, #c4c4c4;
+  border: 1px solid #c4c4c4;
 }
 
 .popup {
