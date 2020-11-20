@@ -662,7 +662,7 @@ body {
 
 .projects {
 	padding: 76px 0 88px 0;
-	@media (max-width:992px) {
+	@media (max-width: 992px) {
 		padding: 50px 0;
 	}
 	&__body {
@@ -672,7 +672,7 @@ body {
 
 	&__title {
 		margin: 0 0 98px 0;
-		@media (max-width:992px){
+		@media (max-width: 992px) {
 			margin: 0 0 30px 0;
 		}
 	}
@@ -683,7 +683,7 @@ body {
 		align-items: flex-end;
 		position: relative;
 		margin: 0 0 90px 0;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			flex-direction: column;
 			margin: 0 0 50px 0;
 		}
@@ -693,8 +693,8 @@ body {
 			left: 0;
 			transform: translate(0, -50%);
 			z-index: 1;
-			@media (max-width:767px){
-				transform: translate(0,0);
+			@media (max-width: 767px) {
+				transform: translate(0, 0);
 				position: static;
 			}
 		}
@@ -705,7 +705,7 @@ body {
 		line-height: 120%;
 		text-transform: uppercase;
 		color: #6f6f6e;
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			margin: 0 0 6px 0;
 		}
 	}
@@ -722,7 +722,7 @@ body {
 			top: 0;
 			left: 0;
 		}
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			width: 100%;
 			padding: 0 0 50% 0;
 			margin: 0 0 20px 0;
@@ -733,28 +733,15 @@ body {
 		display: flex;
 		flex-direction: column;
 		flex: 0 1 228px;
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			flex: none;
 		}
 	}
 
 	&__text {
 		margin: 0 0 47px 0;
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			margin: 0 0 15px 0;
-		}
-	}
-
-	&__link {
-		height: 42px;
-		width: 42px;
-		background: url("../img/projects/arrow-black-right.svg") center no-repeat, #dc911b;
-		display: block;
-		transition: all 0.3s ease 0s;
-		border: 1px solid #dc911b;
-		align-self: flex-end;
-		&:hover {
-			background: url("../img/projects/arrow-gold-right.svg") center no-repeat;
 		}
 	}
 
@@ -769,8 +756,8 @@ body {
 			color: #000000;
 			position: relative;
 			transition: all 0.3s ease 0s;
-			&:after{
-				content: '';
+			&:after {
+				content: "";
 				transition: all 0.3s ease 0s;
 				position: absolute;
 				top: 2px;
@@ -778,10 +765,10 @@ body {
 				width: 10px;
 				height: 17px;
 				margin: 0 0 0 10px;
-				background: url('../img/projects/arrow-gold-right.svg') right/contain no-repeat;
+				background: url("../img/projects/arrow-gold-right.svg") right/contain no-repeat;
 			}
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				transition: all 0.3s ease 0s;
 				position: absolute;
 				bottom: 0;
@@ -790,17 +777,176 @@ body {
 				width: 0;
 				background-color: #000;
 			}
-			&:hover{
-				&:after{
+			&:hover {
+				&:after {
 					right: -23px;
 				}
-				&:before{
+				&:before {
 					width: 100%;
 				}
 			}
 		}
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			align-self: center;
+		}
+	}
+}
+
+.universal-link {
+	height: 42px;
+	width: 42px;
+	background: url("../img/projects/arrow-black-right.svg") center no-repeat, #dc911b;
+	display: block;
+	transition: all 0.3s ease 0s;
+	border: 1px solid #dc911b;
+	align-self: flex-end;
+	&:hover {
+		background: url("../img/projects/arrow-gold-right.svg") center no-repeat;
+	}
+}
+
+//news
+
+.news {
+	background: linear-gradient(to right, #edeeef 49.5%, #fff 0.5%, #fff 50%);
+	@media (max-width: 992px) {
+		background: #edeeef;
+	}
+	&__body {
+		min-height: 470px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__items {
+		margin: 0 -15px 50px -15px;
+		padding: 100px 0 0 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		@media (max-width: 479px) {
+			padding: 30px 0 0 0;
+			margin: 0 -15px 0 -15px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		min-width: 240px;
+		flex: 0 1 25%;
+		padding: 15px;
+		&:last-child{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -4%;
+				width: 1px;
+				height: 100%;
+				background: #B1B1B0;
+				@media (max-width:1200px) {
+					display: none;
+				}
+			}
+		}
+		&-first {
+			@media (max-width: 992px) {
+				flex-direction: column-reverse;
+			}
+		}
+		@media (max-width: 479px) {
+			min-width: 100%;
+		}
+	}
+
+	&__title {
+		height: 130px;
+		overflow: hidden;
+		@media (max-width: 479px) {
+			height: auto;
+		}
+	}
+
+	&__image {
+		position: relative;
+		width: 112px;
+		img {
+			max-width: 100%;
+			position: absolute;
+			top: 26px;
+			left: 30%;
+		}
+		@media (max-width: 992px) {
+			width: 70px;
+			img {
+				top: -130px;
+			}
+		}
+		@media (max-width: 479px) {
+			img {
+				display: none;
+			}
+		}
+	}
+
+	&__subtitle {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;
+		text-transform: uppercase;
+		color: #000000;
+		height: 22px;
+		overflow: hidden;
+		margin: 0 0 16px 0;
+	}
+
+	&__date {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 120%;
+		color: #6f6f6e;
+		margin: 0 0 16px 0;
+	}
+
+	&__text {
+		margin: 0 0 23px 0;
+		flex: 1 1 auto;
+	}
+
+	&__link {
+		align-self: flex-start;
+	}
+
+	&__all-link {
+		align-self: flex-end;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 120%;
+		text-transform: uppercase;
+		color: #000000;
+		margin: 0 0 60px 0;
+		transition: all 0.3s ease 0s;
+		position: relative;
+		&:after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: #000;
+		}
+		&:hover {
+			&:after {
+				width: 100%;
+			}
+		}
+		@media (max-width: 479px) {
+			margin: 0 0 30px 0;
 		}
 	}
 }
