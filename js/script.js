@@ -5,9 +5,7 @@ $(document).ready(function () {
 	const close = document.querySelector('.popup__close');
 	const popupArea = document.querySelector('.popup__area');
 	const form = document.getElementById('form');
-	const qForm = document.getElementById('questions__form');
 	const alert = document.querySelector('.popup__alert');
-	const qAlert = document.querySelector('.questions__alert');
 
 
 	//burger
@@ -41,11 +39,9 @@ $(document).ready(function () {
 	}
 
 
-	//form validation
-	form.addEventListener('submit', formSend);
-	qForm.addEventListener('submit', formSend);
-
 	//callback form validation
+	form.addEventListener('submit', formSend);
+
 	async function formSend(e) {
 		e.preventDefault();
 
@@ -60,42 +56,10 @@ $(document).ready(function () {
 			alert.classList.add('active');
 		}
 	}
-
+	
 	function formValidate(form) {
 		let error = 0;
 		let formReq = document.querySelectorAll('._req');
-
-		for (let index = 0; index < formReq.length; index++) {
-			const input = formReq[index];
-			formRemoveError(input);
-
-			if (input.value === '') {
-				formAddError(input);
-				error++;
-			}
-		}
-		return error;
-	}
-
-	//questions form validation
-	async function formSend(e) {
-		e.preventDefault();
-
-		let error = formValidate(qForm);
-
-		let formData = new FormData(qForm);
-
-		if (error === 0) {
-			qAlert.classList.remove('active');
-			qForm.reset();
-		} else {
-			qAlert.classList.add('active');
-		}
-	}
-
-	function formValidate(qForm) {
-		let error = 0;
-		let formReq = document.querySelectorAll('._requested');
 
 		for (let index = 0; index < formReq.length; index++) {
 			const input = formReq[index];
@@ -118,6 +82,15 @@ $(document).ready(function () {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
 	}
+
+	//questions form validation
+	$('.questions__button').on('click', function (e) {
+		if($('.questions__input-name').val() === '' || $('.questions__input-phone').val() === ''){
+			e.preventDefault();
+			$('.questions__input').addClass('_error');
+			$('.questions__alert').addClass('active');
+		} 
+	});
 
 
 	//choosing city function
