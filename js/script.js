@@ -89,7 +89,7 @@ $(document).ready(function () {
 			e.preventDefault();
 			$('.questions__input').addClass('_error');
 			$('.questions__alert').addClass('active');
-		} 
+		}
 	});
 
 
