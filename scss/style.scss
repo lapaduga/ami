@@ -1228,6 +1228,95 @@ body {
 	}
 }
 
+//footer
+
+.footer {
+	background: #3e3e3d;
+	&__body {
+		min-height: 380px;
+	}
+
+	&__top {
+		padding: 30px 0 30px 0;
+		display: flex;
+	}
+
+	&__left {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+	}
+
+	&__subtitle {
+		font-family: "Montserrat";
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 16px;
+		color: #ffffff;
+	}
+
+	&__list {
+	}
+
+	&__link {
+		font-family: "Montserrat";
+		font-size: 14px;
+		line-height: 27px;
+		color: #777e89;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			color: #fff;
+		}
+	}
+
+	&__right {
+	}
+
+	&__form {
+	}
+
+	&__input {
+	}
+
+	&__form-button {
+	}
+
+	&__contacts {
+	}
+
+	&__location {
+	}
+
+	&__location-item {
+	}
+
+	&__mail {
+	}
+
+	&__city {
+	}
+
+	&__call {
+	}
+
+	&__phone {
+	}
+
+	&__callback {
+	}
+
+	&__bottom {
+	}
+
+	&__copyright {
+	}
+
+	&__devlogo {
+	}
+}
+
 //callback popup
 
 .popup {
