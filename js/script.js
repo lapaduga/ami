@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 
 	//burger
-	$('.header__burger').click(function () {
+	$('.header__burger, .header__link').click(function () {
 		$('.header__burger, .header__menu').toggleClass('active');
 		$('.header__city').fadeOut(300);
 		body.classList.toggle('lock');
@@ -188,5 +188,13 @@ $(document).ready(function () {
 				}
 			}
 		]
+	});
+
+
+	//smooth scroll
+	$("body").on('click', '[href*="#"]', function(e){
+		var fixed_offset = 100;
+		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+		e.preventDefault();
 	});
 });
