@@ -1237,16 +1237,44 @@ body {
 	}
 
 	&__top {
-		padding: 30px 0 30px 0;
+		padding: 30px 0 55px 0;
 		display: flex;
+		border-bottom: 1px solid #777e89;
+		@media (max-width:767px) {
+			flex-direction: column-reverse;
+		}
+		@media (max-width:360px){
+			padding: 30px 0;
+		}
 	}
 
 	&__left {
 		display: flex;
 		justify-content: space-between;
+		flex: 1 1 auto;
+		margin: 0 160px 0 0;
+		@media (max-width:992px) {
+			margin: 0 20px 0 0;
+		}
+		@media (max-width:767px){
+			margin: 0;
+		}
+		@media (max-width:360px){
+			flex-direction: column;
+		}
 	}
 
 	&__item {
+		margin: 0 10px 0 0;
+		@media (max-width:767px){
+			&:last-child{
+				margin: 0;
+			}
+		}
+		@media (max-width:360px){
+			margin: 0 0 15px 0;
+			text-align: center;
+		}
 	}
 
 	&__subtitle {
@@ -1255,9 +1283,22 @@ body {
 		font-size: 15px;
 		line-height: 16px;
 		color: #ffffff;
+		margin: 0 0 15px 0;
+		@media (max-width:360px){
+			margin: 0;
+		}
 	}
 
 	&__list {
+		@media (max-width:360px){
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 0 -5px;
+			li{
+				padding: 5px;
+			}
+		}
 	}
 
 	&__link {
@@ -1266,54 +1307,174 @@ body {
 		line-height: 27px;
 		color: #777e89;
 		transition: all 0.3s ease 0s;
-		&:hover{
+		&:hover {
 			color: #fff;
+		}
+		@media (max-width:360px){
+			line-height: normal;
 		}
 	}
 
 	&__right {
+		max-width: 420px;
+		width: 100%;
+		@media (max-width:992px) {
+			max-width: 360px;
+		}
+		@media (max-width:767px){
+			margin: 0 0 20px 0;
+			max-width: 100%;
+		}
 	}
 
 	&__form {
+		position: relative;
+		margin: 0 0 30px 0;
+		@media (max-width:360px){
+			margin: 0 0 20px 0;
+		}
 	}
 
 	&__input {
+		border: 1px solid #ffffff;
+		border-radius: 3px;
+		background: transparent;
+		padding: 12px 43px 12px 18px;
+		box-shadow: 0 0 0 #ffffff;
+		transition: all 0.3s ease 0s;
+		width: 100%;
+		&::placeholder {
+			font-family: "Montserrat";
+			font-size: 13px;
+			line-height: 19px;
+			color: #dadada;
+		}
+		&:hover {
+			box-shadow: 0px 0px 5px #ffffff;
+		}
+		&:focus {
+			box-shadow: 0px 0px 5px #ffffff;
+		}
+		@media (max-width:992px) {
+			font-size: 16px;
+			&::placeholder{
+				font-size: 16px;
+			}
+		}
 	}
 
 	&__form-button {
+		transition: all 0.3s ease 0s;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: url("../img/footer/search.svg") center no-repeat;
+		width: 43px;
+		height: 43px;
+		border: 1px solid transparent;
 	}
 
 	&__contacts {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width:360px) {
+			flex-direction: column-reverse;
+		}
 	}
 
 	&__location {
+		display: flex;
+		flex-direction: column;
+		margin: 0 10px 0 0;
+		@media (max-width:360px){
+			margin: 0;
+			text-align: center;
+			align-items: center;
+		}
 	}
 
 	&__location-item {
+		font-family: "Montserrat";
+		line-height: 20px;
+		color: #ffffff;
+		padding: 0 0 0 26px;
 	}
 
 	&__mail {
+		text-decoration-line: underline;
+		margin: 0 0 22px 0;
+		background: url("../img/footer/letter.svg") left no-repeat;
+		@media (max-width:360px){
+			margin: 0 0 10px 0;
+		}
 	}
 
 	&__city {
+		background: url("../img/footer/address.svg") left no-repeat;
+		&:hover {
+			text-decoration-line: underline;
+		}
 	}
 
 	&__call {
+		@media (max-width:360px){
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
 	}
 
 	&__phone {
+		font-family: "Montserrat";
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 23px;
+		color: #ffffff;
+		padding: 0 0 0 26px;
+		background: url("../img/footer/call.svg") left no-repeat;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__callback {
+		font-family: "Montserrat";
+		font-weight: 500;
+		line-height: 17px;
+		color: #ffffff;
+		padding: 12px 18px;
+		background: #fd9913;
+		border-radius: 3px;
+		border: 1px solid #fd9913;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		margin: 15px 0 0 0;
+		text-align: center;
+		&:hover {
+			background: transparent;
+		}
 	}
 
 	&__bottom {
+		min-height: 132px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__copyright {
+		font-family: "Montserrat";
+		font-size: 13px;
+		line-height: 19px;
+		color: #777e89;
+		margin: 0 10px 0 0;
 	}
 
 	&__devlogo {
+		flex: 0 0 100px;
+		display: flex;
+		img{
+			max-width: 100%;
+		}
 	}
 }
 
@@ -1489,7 +1650,7 @@ body {
 		border: 1px solid #dc911b;
 		&:hover {
 			background-color: #fff;
-			color: #000000;
+			color: #dc911b;
 		}
 	}
 }

@@ -6,6 +6,7 @@ $(document).ready(function () {
 	const popupArea = document.querySelector('.popup__area');
 	const form = document.getElementById('form');
 	const alert = document.querySelector('.popup__alert');
+	const footerCallback = document.querySelector('.footer__callback');
 
 
 	//burger
@@ -18,6 +19,10 @@ $(document).ready(function () {
 
 	//callback popup
 	orderCall.onclick = function () {
+		callback.classList.add('active');
+		body.classList.add('lock');
+	}
+	footerCallback.onclick = function () {
 		callback.classList.add('active');
 		body.classList.add('lock');
 	}
