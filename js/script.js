@@ -85,11 +85,23 @@ $(document).ready(function () {
 
 	//questions form validation
 	$('.questions__button').on('click', function (e) {
-		if($('.questions__input-name').val() === '' || $('.questions__input-phone').val() === ''){
+		if($('.questions__input-name').val() === ''){
 			e.preventDefault();
-			$('.questions__input').addClass('_error');
+			$('.questions__input-name').addClass('_error');
 			$('.questions__alert').addClass('active');
+		} else{
+			$('.questions__input-name').removeClass('_error');
+			$('.questions__alert').removeClass('active');
 		}
+		if($('.questions__input-phone').val() === ''){
+			e.preventDefault();
+			$('.questions__input-phone').addClass('_error');
+			$('.questions__alert').addClass('active');
+		} else{
+			$('.questions__input-phone').removeClass('_error');
+			$('.questions__alert').removeClass('active');
+		}
+		
 	});
 
 
