@@ -1725,6 +1725,60 @@ body {
   background: url("../img/slider/certificatesbg.svg") center right no-repeat, #3e3e3d;
 }
 
+.clients {
+  padding: 60px 0 90px 0;
+}
+
+@media (max-width: 767px) {
+  .clients {
+    padding: 50px 0;
+  }
+}
+
+.clients__title {
+  margin: 0 0 60px 200px;
+}
+
+@media (max-width: 767px) {
+  .clients__title {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+}
+
+.clients__slider .slick-list {
+  overflow: hidden;
+}
+
+.clients__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients__slider-item {
+  width: 300px;
+  height: 180px;
+  border: 1px solid #f2f2f2;
+  text-align: center;
+}
+
+.clients__slider-item img {
+  max-width: 100%;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+@media (max-width: 767px) {
+  .clients__slider-item {
+    height: 100px;
+  }
+  .clients__slider-item img {
+    -webkit-transform: translate(0, 18px);
+            transform: translate(0, 18px);
+  }
+}
+
 .popup {
   position: fixed;
   width: 100%;

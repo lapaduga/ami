@@ -143,7 +143,7 @@ $(document).ready(function () {
 	}
 
 
-	//slider
+	//testimonials and certificates slider
 	$('.slider').slick({
 		slidesToShow: 3,
 		infinite: false,
@@ -154,6 +154,35 @@ $(document).ready(function () {
 				settings: {
 					centerMode: true,
 					initialSlide: 2
+				}
+			},
+			{
+				breakpoint: 993,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 601,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+
+	//clients slider
+	$('.clients__slider').slick({
+		arrows: false,
+		slidesToShow: 4,
+		rows:2,
+		autoplay: true,
+		responsive:[
+			{
+				breakpoint: 1366,
+				settings: {
+					slidesToShow: 3
 				}
 			},
 			{
